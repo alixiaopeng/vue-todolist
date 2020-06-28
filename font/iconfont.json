@@ -1,0 +1,37 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "354565",
+      "name": "对",
+      "font_class": "iconfontcheck",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "3217875",
+      "name": "主页",
+      "font_class": "icon-",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "6048457",
+      "name": "删除",
+      "font_class": "shanchu",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "7677936",
+      "name": "输入",
+      "font_class": "shuru",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    }
+  ]
+}
