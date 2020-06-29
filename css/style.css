@@ -50,6 +50,7 @@
 	margin: 10px 0 0 10px;
 }
 
+/* 选中和删除按钮 */
 .check,
 .delete {
 	width: 35px;
@@ -64,7 +65,15 @@
 }
 
 .delete {
-	right: 10px;
+    right: 10px;
+    color: red;
+    border-color: red;
+}
+
+/* 选中按钮处于选中状态 */
+.checked{
+    color: white;
+    background-color: blue;
 }
 
 /* 底部 */
@@ -84,6 +93,12 @@
 	float: left;
 	text-align: center;
 	margin-left: 50px;
+}
+
+/* 底部按钮处于选中状态 */
+.footer-checked{
+    color: #fff;
+    background-color: green;
 }
 
 /* 添加信息弹出框 */

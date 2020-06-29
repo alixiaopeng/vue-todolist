@@ -22,12 +22,12 @@
 
 			<!-- 内容部分 -->
 			<div class="content">
-				<div class="box" v-for='item of todos'>
+				<div class="box" v-for='(item,index) of newTodos'>
 					<div class="info">{{item.task}}</div>
-					<div class="check">
+					<div class="check" @click="changeFlag(index)" :class="{'checked':item.flag}">
 						<i class="iconfont">&#xe61b;</i>
 					</div>
-					<div class="delete" @click='showDeleteTipsMask'>
+					<div class="delete" @click='showDeleteTipsMask(index)'>
 						<i class="iconfont">&#xe617;</i>
 					</div>
 				</div>
@@ -35,9 +35,9 @@
 
 			<!-- 底部 -->
 			<div class="footer">
-				<div class="all">所有</div>
-				<div class="finish">完成</div>
-				<div class="unfinish">未完成</div>
+				<div class="all" @click='checkedAll' :class="{'footer-checked':allFlag}">所有</div>
+				<div class="finish" @click='checkedFinish' :class="{'footer-checked':finishFlag}">完成</div>
+				<div class="unfinish" @click='checkedUnFinish' :class="{'footer-checked':UnFinishFlag}">未完成</div>
 			</div>
 
 			<!-- 添加信息弹出框 -->
@@ -53,7 +53,7 @@
             <div class="edit-mask" v-show='deleteMaskFlag' @click.self="hideDeleteTipsMask">
 				<div class="mask">
 					<p>是否删除？</p>
-					<div class="determine">确定</div>
+					<div class="determine" @click='remove(activeIndex)'>确定</div>
 					<div class="cancel" @click='hideDeleteTipsMask'>取消</div>
 				</div>
             </div>
